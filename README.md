@@ -58,16 +58,14 @@ All the options are fully detailed in the [Options page](https://github.com/Wsdl
 use WsdlToPhp\PackageGenerator\ConfigurationReader\GeneratorOptions;
 use WsdlToPhp\PackageGenerator\Generator\Generator;
 
-// Options definition: the configuration file parameter is optional
-$options = GeneratorOptions::instance(/* '/path/file.yml' */);
-$options
-    ->setOrigin('http://developer.ebay.com/webservices/latest/ebaySvc.wsdl')
-    ->setDestination('./MySdk')
-    ->setComposerName('myproject/mysdk');
-// Generator instantiation
-$generator = new Generator($options);
-// Package generation
-$generator->generatePackage();
+/*      set_time_limit(240);
+        $options = GeneratorOptions::instance();
+        $options
+        ->setOrigin('https://homologacao.ginfes.com.br/ServiceGinfesImpl?wsdl')
+        ->setDestination(FCPATH."/vendor/nfse")
+        ->setComposerName('remsoft/nfse');
+        $generator = new Generator($options);
+        $generator->generatePackage(); */
 ```
 
 #### With command line:
